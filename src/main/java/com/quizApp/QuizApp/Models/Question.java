@@ -13,6 +13,8 @@ import lombok.Data;
 public class Question {
  @Id
   private String id ; 
+  @NotBlank(message = "Level cannot be blank")
+  private String level ; 
   @NotBlank(message = "Category cannot be blank")
   private String category ; 
   @NotBlank(message = "Question text cannot be blank")
