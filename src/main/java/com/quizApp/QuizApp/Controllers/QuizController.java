@@ -57,4 +57,13 @@ public class QuizController {
             return ResponseEntity.status(500).build();
         }
     }
+    @GetMapping("/id")
+    public ResponseEntity<Quiz> getQuizById(@RequestParam String id) {
+        try {
+            return quizService.getQuizById(id);
+        } catch (Exception e) {
+           e.printStackTrace();
+            return ResponseEntity.status(500).build();
+        }
+    }
 }

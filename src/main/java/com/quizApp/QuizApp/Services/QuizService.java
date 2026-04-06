@@ -42,5 +42,8 @@ public class QuizService {
      public ResponseEntity<List<Quiz>> getAllQuizzesByCategory(String category){
         return new ResponseEntity<>(quizRepository.findByCategory(category), HttpStatus.OK);
     }
+    public ResponseEntity<Quiz> getQuizById(String id){
+        return new ResponseEntity<>(quizRepository.findById(id).orElse(null), HttpStatus.OK);
+    }
    
 }

@@ -14,5 +14,6 @@ public class Attempt {
     private String userId;
     private String quizId;
     private Integer score;
-    private Long submittedAt;
+    private Integer outOf ; 
+    
 }

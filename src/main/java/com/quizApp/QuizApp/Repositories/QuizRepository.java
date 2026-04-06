@@ -12,7 +12,7 @@ import com.quizApp.QuizApp.Models.Quiz;
 public interface QuizRepository extends MongoRepository<Quiz, String>{
 
     List<Quiz> findByCategory(String category);
-
+    
    
     
 }
