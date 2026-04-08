@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,7 @@ public class AttemptController {
 @Autowired
 private AttemptService attemptService ;
  @PostMapping("/submit")
-    public ResponseEntity<String> submitAttempt(QuizResponse quizResponse) {
+    public ResponseEntity<String> submitAttempt(@RequestBody QuizResponse quizResponse) {
         return attemptService.SubmitQuiz(quizResponse) ;
     }
 @GetMapping("/userResults")
